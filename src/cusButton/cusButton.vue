@@ -1,7 +1,5 @@
 <template>
-    <div class="loading">
-        <van-button type="primary">{{message}}</van-button>
-    </div>
+    <van-button type="primary">{{message}}</van-button>
 </template>
 <script>
     export default {

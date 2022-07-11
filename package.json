@@ -1,6 +1,6 @@
 {
-  "name": "gt-ehr-component-test",
-  "version": "1.0.1",
+  "name": "y-vant3-component",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/y-vant-component.js",
   "scripts": {
