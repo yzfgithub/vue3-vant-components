@@ -80,6 +80,14 @@ var script = {
             message:{
                 type: String,
                 default:()=>'信息'
+            },
+            primary: {
+                type: String,
+                default: "default"
+            },
+            plain: {
+                type: Boolean,
+                default: false
             }
         },
         data() {
@@ -92,19 +100,22 @@ var script = {
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_van_button = vue.resolveComponent("van-button");
 
-  return (vue.openBlock(), vue.createBlock(_component_van_button, { type: "primary" }, {
+  return (vue.openBlock(), vue.createBlock(_component_van_button, {
+    type: $props.primary,
+    plain: $props.plain
+  }, {
     default: vue.withCtx(() => [
       vue.createTextVNode(vue.toDisplayString($props.message), 1)
     ]),
     _: 1
-  }))
+  }, 8, ["type", "plain"]))
 }
 
-var css_248z = "\n.loading[data-v-599fe0d4] {\n    width: 100%;\n    height: 100vh;\n    position: fixed;\n    z-index: 10;\n    background: rgba(255,255,255, 0.7);\n    top: 0;\n    left: 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n";
+var css_248z = "\n.loading[data-v-565ffb18] {\n    width: 100%;\n    height: 100vh;\n    position: fixed;\n    z-index: 10;\n    background: rgba(255,255,255, 0.7);\n    top: 0;\n    left: 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n";
 styleInject(css_248z);
 
 script.render = render;
-script.__scopeId = "data-v-599fe0d4";
+script.__scopeId = "data-v-565ffb18";
 
 script.install = function (Vue) {
   Vue.component(script.name, script);

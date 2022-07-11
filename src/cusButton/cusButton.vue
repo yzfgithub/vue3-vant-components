@@ -1,5 +1,5 @@
 <template>
-    <van-button type="primary">{{message}}</van-button>
+    <van-button :type="primary" :plain="plain">{{message}}</van-button>
 </template>
 <script>
     export default {
@@ -8,6 +8,14 @@
             message:{
                 type: String,
                 default:()=>'信息'
+            },
+            primary: {
+                type: String,
+                default: "default"
+            },
+            plain: {
+                type: Boolean,
+                default: false
             }
         },
         data() {
